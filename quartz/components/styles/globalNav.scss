@@ -1,0 +1,27 @@
+.global-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.85rem;
+  max-width: 1200px;
+  margin: 1rem auto 0;
+  padding: 0 2rem;
+  font-size: 0.85rem;
+
+  a {
+    color: var(--darkgray);
+    opacity: 0.8;
+  }
+
+  a[aria-current="page"] {
+    color: var(--secondary);
+    opacity: 1;
+  }
+
+  @media all and (max-width: 800px) {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding: 0 1rem;
+    white-space: nowrap;
+  }
+}

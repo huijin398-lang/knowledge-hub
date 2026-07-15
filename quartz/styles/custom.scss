@@ -1,3 +1,29 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// Visual alignment with hfdz1119.top: dark, restrained, with cyan and pink accents.
+.page > #quartz-body {
+  .sidebar.left,
+  .sidebar.right {
+    background: color-mix(in srgb, var(--light) 84%, transparent);
+  }
+}
+
+.page-title a {
+  color: var(--dark);
+}
+
+article {
+  .page-header {
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  .tag-link {
+    border-radius: 4px;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .page > #quartz-body .sidebar.right > * {
+    min-width: 0;
+  }
+}

@@ -4,12 +4,13 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
+  header: [Component.GlobalNav()],
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      Home: "https://hfdz1119.top",
+      Navigation: "https://nav.hfdz1119.top",
+      Knowledge: "https://wiki.hfdz1119.top",
     },
   }),
 }
@@ -44,6 +45,10 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    Component.ConditionalRender({
+      component: Component.RecentNotes({ title: "最近更新", limit: 5 }),
+      condition: (page) => page.fileData.slug === "index",
+    }),
   ],
 }
 
@@ -64,5 +69,10 @@ export const defaultListPageLayout: PageLayout = {
     }),
     Component.Explorer(),
   ],
-  right: [],
+  right: [
+    Component.ConditionalRender({
+      component: Component.Graph(),
+      condition: (page) => page.fileData.slug === "tags",
+    }),
+  ],
 }
