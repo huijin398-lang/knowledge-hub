@@ -1,0 +1,17 @@
+.language-toggle {
+  appearance: none;
+  min-width: 2.5rem;
+  height: 2rem;
+  padding: 0 0.45rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--darkgray);
+  cursor: pointer;
+  font: 600 0.72rem var(--codeFont);
+
+  &:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+  }
+}

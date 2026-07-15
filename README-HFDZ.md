@@ -30,4 +30,4 @@ Run `npm ci`, then `npx quartz build`. Verify the homepage, search, tags, backli
 
 ## Language
 
-The current Quartz v4 interface uses Chinese (`zh-CN`). English terms in global navigation remain deliberate. Quartz v4's built-in locale is build-time configuration; a runtime Chinese/English toggle needs a dedicated custom component and translated UI dictionary, so it is not enabled as a misleading nonfunctional control in this version.
+The default interface is Chinese (`zh-CN`). The `EN` control switches common navigation and reading-interface labels to English and persists the choice locally. Notes remain Chinese by design; the project does not maintain duplicated bilingual articles.
