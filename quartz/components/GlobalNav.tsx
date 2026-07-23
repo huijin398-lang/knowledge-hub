@@ -21,14 +21,12 @@ const legacyDocsifyRedirect = `
 
 const GlobalNav: QuartzComponent = () => (
   <nav class="global-nav" aria-label="Global navigation">
-    <a href="https://hfdz1119.top">Home</a>
-    <a href="https://nav.hfdz1119.top">Navigation</a>
+    <a href="https://hfdz1119.top">HFDZ</a>
+    <a href="https://nav.hfdz1119.top">导航</a>
     <a href="https://wiki.hfdz1119.top" aria-current="page">
-      Knowledge
+      知识花园
     </a>
-    <a href="https://hfdz1119.top/#projects">Projects</a>
-    <a href="https://nav.hfdz1119.top">Tools</a>
-    <a href="https://hfdz1119.top/#about">About</a>
+    <a href="https://image.hfdz1119.top">图床</a>
   </nav>
 )
 

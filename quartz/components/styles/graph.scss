@@ -1,9 +1,32 @@
 @use "../../styles/variables.scss" as *;
 
 .graph {
-  & > h3 {
+  border-top: 1px solid var(--lightgray);
+  padding-top: 1rem;
+
+  & > summary {
+    color: var(--dark);
     font-size: 1rem;
-    margin: 0;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--headerFont);
+    font-weight: 600;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::after {
+      content: "+";
+      color: var(--secondary);
+      float: right;
+      font-family: var(--codeFont);
+      font-weight: 400;
+    }
+  }
+
+  &[open] > summary::after {
+    content: "−";
   }
 
   & > .graph-outer {
